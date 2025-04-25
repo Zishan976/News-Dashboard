@@ -45,20 +45,20 @@ $(document).ready(function () {
     console.error("Error fetching news");
     $("#news-container").html("<p>Failed to load news articles.</p>");
   });
-});
 
-$.get("/news", function (data) {
-  const picksContainer = $("#picks-container");
-  const picks = data.results.slice(0, 5); // Limit to the first 5 articles
-  picks.forEach((article) => {
-    const pickItem = `<div class="pick-item">
+  $.get("/news", function (data) {
+    const picksContainer = $("#picks-container");
+    const picks = data.results.slice(0, 5); // Limit to the first 5 articles
+    picks.forEach((article) => {
+      const pickItem = `<div class="pick-item">
       <img src="${article.image_url}" alt="${article.title}" class="pick-image" />
       <h3>${article.title}</h3>
       <a href="${article.link}" target="_blank">Read More</a>
     </div>`;
-    picksContainer.append(pickItem);
+      picksContainer.append(pickItem);
+    });
+  }).fail(function () {
+    console.error("Error fetching curated picks");
+    $("#picks-container").html("<p>Failed to load curated picks.</p>");
   });
-}).fail(function () {
-  console.error("Error fetching curated picks");
-  $("#picks-container").html("<p>Failed to load curated picks.</p>");
 });
