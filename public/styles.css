@@ -91,6 +91,24 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  #container {
+    flex-direction: column;
+  }
+
+  #sidebar {
+    margin-top: 20px;
+  }
+
+  #main-content {
+    padding: 15px;
+  }
+
+  #news-container div {
+    margin-bottom: 10px;
+  }
+}
+
 @media (max-width: 768px) {
   #container {
     flex-direction: column;
@@ -110,5 +128,31 @@ body {
 
   #news-container div {
     margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  #main-content h1 {
+    font-size: 1.5em;
+  }
+
+  #news-container div {
+    padding: 8px;
+  }
+
+  #picks-container .pick-item {
+    padding: 8px;
+  }
+
+  .news-item p {
+    font-size: 0.9em;
+  }
+
+  .news-item a {
+    font-size: 0.9em;
   }
 }
