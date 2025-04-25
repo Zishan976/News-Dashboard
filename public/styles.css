@@ -1,0 +1,114 @@
+/* General Page Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+}
+
+/* Main Content Section */
+#main-content {
+  flex: 3;
+  padding: 20px;
+}
+
+#main-content h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#news-container div {
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Sidebar Section */
+#sidebar {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-left: 1px solid #ddd;
+}
+
+#picks-container div {
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Weather Widget */
+#weather-container {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.news-item img {
+  max-width: 100%;
+}
+
+.news-item p {
+  font-size: 1em;
+  color: #666;
+}
+
+.news-item a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.news-item a:hover {
+  text-decoration: underline;
+}
+
+#picks-container .pick-item {
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #e9ecef;
+  border-radius: 5px;
+}
+
+.pick-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #container {
+    flex-direction: column;
+  }
+
+  #sidebar {
+    margin-top: 20px;
+  }
+
+  #weather-container {
+    display: none;
+  }
+
+  #main-content {
+    padding: 10px;
+  }
+
+  #news-container div {
+    margin-bottom: 10px;
+  }
+}
