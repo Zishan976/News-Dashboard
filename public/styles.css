@@ -1,34 +1,50 @@
 /* General Page Styling */
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
 }
 
 #container {
   display: flex;
   flex-direction: row;
   margin: 20px;
+  gap: 20px;
 }
 
 /* Main Content Section */
 #main-content {
   flex: 3;
   padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #main-content h1 {
   margin-bottom: 20px;
-  color: #333;
+  color: #222;
 }
 
 #news-container div {
   margin-bottom: 15px;
-  padding: 10px;
+  padding: 15px;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 5px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#news-container div:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Sidebar Section */
@@ -37,14 +53,21 @@ body {
   padding: 20px;
   background-color: #f9f9f9;
   border-left: 1px solid #ddd;
+  border-radius: 5px;
 }
 
 #picks-container div {
   margin-bottom: 15px;
-  padding: 10px;
+  padding: 15px;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 5px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#picks-container div:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Weather Widget */
@@ -61,20 +84,23 @@ body {
 
 .news-item img {
   max-width: 100%;
+  border-radius: 5px;
 }
 
 .news-item p {
   font-size: 1em;
-  color: #666;
+  color: #555;
 }
 
 .news-item a {
   text-decoration: none;
   color: #007bff;
+  transition: color 0.2s;
 }
 
 .news-item a:hover {
   text-decoration: underline;
+  color: #0056b3;
 }
 
 #picks-container .pick-item {
